@@ -1,0 +1,29 @@
+
+        <li [ngClass]="{'list-group-item': true,
+        'list-group-item-success': loveIts > 0,
+        'list-group-item-danger': loveIts < 0}">
+        
+
+  <div  class="media text-muted pt-3">
+    <p class="media-body pb-3 mb-0 small lh-125">
+      <span class="d-block">
+        <strong class="h3 text-left"> {{ title }} </strong>
+      </span>
+      {{ content }}
+    </p>
+    <span class="h6 text-right pt-1.2">{{ created_at | date: 'yMMMMEEEEd'  }}</span>
+    <div style="margin-top: 40px;">
+      <button
+        type="button"
+        class="btn btn-primary"
+        style="margin-right: 10px;" (click)="onLoveIt()">Love It
+      </button>
+      <button ml-3 type="button" class="btn btn-danger" (click)="onDontLoveIt()"> Don't Love It
+      </button>
+    </div>
+  </div>
+</li>
+
+
+
+
